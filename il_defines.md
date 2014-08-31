@@ -105,7 +105,7 @@
 <td>{LINE}{SLINE}{OPCODE}{INDEX_STR_LEN}{STR_BYTES}</td>
 <td>13</td>
 </tr><tr><td colspan=4>
-从栈顶弹出一个对象并将该对象设置到变量组中。
+从栈顶弹出一个对象并将该对象设置到变量组中。<br>
 {INDEX_STR_LEN}: 索引名称的字符串的字节长度。<br>
 {STR_BYTES}:索引的字节组。
 </td></tr>
@@ -134,7 +134,7 @@
 <td>{LINE}{SLINE}{OPCODE}{DOUBLE}</td>
 <td>17</td>
 </tr><tr><td colspan=4>
-载入一个 double 小数，并压入栈顶。
+载入一个 double 小数，并压入栈顶。<br>
 {DOUBLE}：8位长整形字节组。
 </td></tr>
 
@@ -145,7 +145,7 @@
 <td>{LINE}{SLINE}{OPCODE}{LONG}</td>
 <td>17</td>
 </tr><tr><td colspan=4>
-载入一个 long 整数，并压入栈顶。
+载入一个 long 整数，并压入栈顶。<br>
 {LONG}：8位长整形字节组。
 </td></tr>
 
@@ -156,7 +156,7 @@
 <td>{LINE}{SLINE}{OPCODE}{STR_LEN}{STR_BYTES}</td>
 <td>13+N</td>
 </tr><tr><td colspan=4>
-载入一个字符串，并压入栈顶。
+载入一个字符串，并压入栈顶。<br>
 {STR_LEN}: 字符串的字节长度。<br>
 {STR_BYTES}:字符串的字节组。
 </td></tr>
@@ -309,12 +309,12 @@
 
 <tr>
 <td rowspan=2>26</td>
-<td>end</td>
+<td>abort</td>
 <td>N/A</td>
 <td>{LINE}{SLINE}{OPCODE}</td>
 <td>9</td>
 </tr><tr><td colspan=4>
-退出当前文档的执行。
+终止当前文档的执行。
 </td></tr>
 
 <tr>

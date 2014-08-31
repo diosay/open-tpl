@@ -2,31 +2,33 @@
 
 <table>
 <tr>
-<th>代码</th>
+<th>操作码</th>
 <th>名称</th>
 <th>符号</th>
 <th>原形</th>
-<th>长度</th>
+<th>字节长度</th>
 </tr>
 
 <tr>
-<td rowspan=2>1</td>
+<td rowspan=2>0</td>
 <td>nop</td>
 <td>N/A</td>
-<td>{LINE}...</td>
-<td>0</td>
+<td>{LINE}{OP}</td>
+<td>5</td>
 </tr><tr><td colspan=4>
-summary
+表示一个占位，不执行任何操作。通常用作 label 使用。
 </td></tr>
 
 <tr>
 <td rowspan=2>1</td>
 <td>dom</td>
 <td>N/A</td>
-<td>{LINE}...</td>
+<td>{LINE}{OPCODE}{FILE_PATH_STR_LEN}{STR_BYTES}</td>
 <td>0</td>
 </tr><tr><td colspan=4>
-summary
+表示一个文档，执行此操作时将打开该文档为执行。<br>
+{FILE_PATH_STR_LEN}: 文件地址的字符串的字节长度。<br>
+{STR_BYTES}:文件地址的字节组。
 </td></tr>
 
 <tr>

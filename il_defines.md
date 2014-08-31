@@ -1,11 +1,11 @@
-#IL Defines
+#Opcode Defines
 
 <table style="font-size:12px">
 <tr>
 <th>操作码</th>
 <th>名称</th>
 <th>符号</th>
-<th>原形</th>
+<th>原形(指令结构)</th>
 <th>长度</th>
 </tr>
 
@@ -21,7 +21,7 @@
 
 <tr>
 <td rowspan=2>1</td>
-<td>dom</td>
+<td>doc</td>
 <td>N/A</td>
 <td>{LINE}{SLINE}{OPCODE}{FILE_PATH_STR_LEN}{STR_BYTES}</td>
 <td>9+N</td>
@@ -126,277 +126,205 @@
 {STR_BYTES}:索引的字节组。
 </td></tr>
 
+
 <tr>
-<td rowspan=2>1</td>
-<td>ldu_db</td>
+<td rowspan=2>9</td>
+<td>lddbl</td>
 <td>N/A</td>
-<td>{LINE}...</td>
-<td>0</td>
+<td>{LINE}{SLINE}{OPCODE}{DOUBLE}</td>
+<td>17</td>
 </tr><tr><td colspan=4>
-summary
+载入一个 double 小数，并压入栈顶。
+{DOUBLE}：8位长整形字节组。
 </td></tr>
 
 <tr>
-<td rowspan=2>1</td>
-<td>ldu_l</td>
+<td rowspan=2>10</td>
+<td>ldint</td>
 <td>N/A</td>
-<td>{LINE}...</td>
-<td>0</td>
+<td>{LINE}{SLINE}{OPCODE}{LONG}</td>
+<td>17</td>
 </tr><tr><td colspan=4>
-summary
+载入一个 long 整数，并压入栈顶。
+{LONG}：8位长整形字节组。
 </td></tr>
 
 <tr>
-<td rowspan=2>1</td>
+<td rowspan=2>11</td>
 <td>ldstr</td>
 <td>N/A</td>
-<td>{LINE}...</td>
-<td>0</td>
+<td>{LINE}{SLINE}{OPCODE}{STR_LEN}{STR_BYTES}</td>
+<td>13+N</td>
 </tr><tr><td colspan=4>
-summary
+载入一个字符串，并压入栈顶。
+{STR_LEN}: 字符串的字节长度。<br>
+{STR_BYTES}:字符串的字节组。
 </td></tr>
 
-<tr>
-<td rowspan=2>1</td>
-<td>ldm_i</td>
-<td>N/A</td>
-<td>{LINE}...</td>
-<td>0</td>
-</tr><tr><td colspan=4>
-summary
-</td></tr>
 
-<tr>
-<td rowspan=2>1</td>
-<td>call</td>
-<td>N/A</td>
-<td>{LINE}...</td>
-<td>0</td>
-</tr><tr><td colspan=4>
-summary
-</td></tr>
 
 <tr><td colspan=5>运算符</td></tr>
 
 <tr>
-<td rowspan=2>1</td>
+<td rowspan=2>12</td>
 <td>add</td>
-<td>N/A</td>
-<td>{LINE}...</td>
-<td>0</td>
+<td>+</td>
+<td>{LINE}{SLINE}{OPCODE}</td>
+<td>9</td>
 </tr><tr><td colspan=4>
-summary
+从栈顶弹出两个对象进行相加，并将结果压入栈顶。
 </td></tr>
 
 <tr>
-<td rowspan=2>1</td>
+<td rowspan=2>13</td>
 <td>sub</td>
-<td>N/A</td>
-<td>{LINE}...</td>
-<td>0</td>
+<td>-</td>
+<td>{LINE}{SLINE}{OPCODE}</td>
+<td>9</td>
 </tr><tr><td colspan=4>
-summary
+从栈顶弹出两个对象进行相减，并将结果压入栈顶。
 </td></tr>
 
 <tr>
-<td rowspan=2>1</td>
+<td rowspan=2>14</td>
 <td>mul</td>
-<td>N/A</td>
-<td>{LINE}...</td>
-<td>0</td>
+<td>*</td>
+<td>{LINE}{SLINE}{OPCODE}</td>
+<td>9</td>
 </tr><tr><td colspan=4>
-summary
+从栈顶弹出两个对象进行相乘，并将结果压入栈顶。
 </td></tr>
 
 <tr>
-<td rowspan=2>1</td>
+<td rowspan=2>15</td>
 <td>div</td>
-<td>N/A</td>
-<td>{LINE}...</td>
-<td>0</td>
+<td>/</td>
+<td>{LINE}{SLINE}{OPCODE}</td>
+<td>9</td>
 </tr><tr><td colspan=4>
-summary
+从栈顶弹出两个对象进行相除，并将结果压入栈顶。
 </td></tr>
 
 <tr>
-<td rowspan=2>1</td>
+<td rowspan=2>16</td>
 <td>mod</td>
-<td>N/A</td>
-<td>{LINE}...</td>
-<td>0</td>
+<td>%</td>
+<td>{LINE}{SLINE}{OPCODE}</td>
+<td>9</td>
 </tr><tr><td colspan=4>
-summary
+从栈顶弹出两个对象进行模运算，并将结果压入栈顶。
 </td></tr>
 
 <tr>
-<td rowspan=2>1</td>
+<td rowspan=2>17</td>
 <td>eq</td>
-<td>N/A</td>
-<td>{LINE}...</td>
-<td>0</td>
+<td>=</td>
+<td>{LINE}{SLINE}{OPCODE}</td>
+<td>9</td>
 </tr><tr><td colspan=4>
-summary
+从栈顶弹出两个对象进行等于比较，并将结果压入栈顶。
 </td></tr>
 
 <tr>
-<td rowspan=2>1</td>
+<td rowspan=2>18</td>
 <td>neq</td>
-<td>N/A</td>
-<td>{LINE}...</td>
-<td>0</td>
+<td>!=</td>
+<td>{LINE}{SLINE}{OPCODE}</td>
+<td>9</td>
 </tr><tr><td colspan=4>
-summary
+从栈顶弹出两个对象进行不等于比较，并将结果压入栈顶。
 </td></tr>
 
 <tr>
-<td rowspan=2>1</td>
-<td>gte</td>
-<td>N/A</td>
-<td>{LINE}...</td>
-<td>0</td>
-</tr><tr><td colspan=4>
-summary
-</td></tr>
-
-<tr>
-<td rowspan=2>1</td>
-<td>lte</td>
-<td>N/A</td>
-<td>{LINE}...</td>
-<td>0</td>
-</tr><tr><td colspan=4>
-summary
-</td></tr>
-
-<tr>
-<td rowspan=2>1</td>
+<td rowspan=2>19</td>
 <td>gt</td>
 <td>N/A</td>
-<td>{LINE}...</td>
-<td>0</td>
+<td>{LINE}{SLINE}{OPCODE}</td>
+<td>9</td>
 </tr><tr><td colspan=4>
-summary
+从栈顶弹出两个对象进行大于比较，并将结果压入栈顶。
 </td></tr>
 
 <tr>
-<td rowspan=2>1</td>
+<td rowspan=2>20</td>
+<td>gte</td>
+<td>></td>
+<td>{LINE}{SLINE}{OPCODE}</td>
+<td>9</td>
+</tr><tr><td colspan=4>
+从栈顶弹出两个对象进行大于等于比较，并将结果压入栈顶。
+</td></tr>
+
+<tr>
+<td rowspan=2>21</td>
 <td>lt</td>
 <td>N/A</td>
-<td>{LINE}...</td>
-<td>0</td>
+<td>{LINE}{SLINE}{OPCODE}</td>
+<td>9</td>
 </tr><tr><td colspan=4>
-summary
+从栈顶弹出两个对象进行小于比较，并将结果压入栈顶。
 </td></tr>
 
 <tr>
-<td rowspan=2>1</td>
+<td rowspan=2>22</td>
+<td>lte</td>
+<td>N/A</td>
+<td>{LINE}{SLINE}{OPCODE}</td>
+<td>9</td>
+</tr><tr><td colspan=4>
+从栈顶弹出两个对象进行小于比较，并将结果压入栈顶。
+</td></tr>
+
+<tr>
+<td rowspan=2>23</td>
 <td>not</td>
 <td>N/A</td>
-<td>{LINE}...</td>
-<td>0</td>
+<td>{LINE}{SLINE}{OPCODE}</td>
+<td>9</td>
 </tr><tr><td colspan=4>
-summary
+从栈顶弹出一个对象进行非运算，并将结果压入栈顶。
 </td></tr>
 
 <tr>
-<td rowspan=2>1</td>
+<td rowspan=2>24</td>
 <td>and</td>
 <td>N/A</td>
-<td>{LINE}...</td>
-<td>0</td>
+<td>{LINE}{SLINE}{OPCODE}</td>
+<td>9</td>
 </tr><tr><td colspan=4>
-summary
+从栈顶弹出两个对象进行逻辑与运算，并将结果压入栈顶。
 </td></tr>
 
 <tr>
-<td rowspan=2>1</td>
+<td rowspan=2>25</td>
 <td>or</td>
 <td>||</td>
-<td>{LINE}{CODE}</td>
-<td>5</td>
+<td>{LINE}{SLINE}{OPCODE}</td>
+<td>9</td>
 </tr><tr><td colspan=4>
-将栈顶部的两个对象(尝试转换为bool类型)进行或操作并将结果推送到堆栈。
+从栈顶弹出两个对象进行逻辑非运算，并将结果压入栈顶。
+</td></tr>
+
+<tr><td colspan=5>系统</td></tr>
+
+<tr>
+<td rowspan=2>26</td>
+<td>end</td>
+<td>N/A</td>
+<td>{LINE}{SLINE}{OPCODE}</td>
+<td>9</td>
+</tr><tr><td colspan=4>
+退出当前文档的执行。
 </td></tr>
 
 <tr>
-<td rowspan=2>1</td>
-<td>nil_c</td>
-<td>??</td>
-<td>{LINE}{CODE}</td>
-<td>5</td>
-</tr><tr><td colspan=4>
-null 合并运算符。如果此运算符的左操作数不为 null，则此运算符将返回左操作数；否则返回右操作数。
-</td></tr>
-
-<tr>
-<td rowspan=2>1</td>
+<td rowspan=2>27</td>
 <td>exit</td>
 <td>N/A</td>
-<td>{LINE}...</td>
-<td>0</td>
+<td>{LINE}{SLINE}{OPCODE}</td>
+<td>9</td>
 </tr><tr><td colspan=4>
-summary
+结束整个当前事务的执行。
 </td></tr>
-
-<tr>
-<td rowspan=2>1</td>
-<td>stloc</td>
-<td>N/A</td>
-<td>{LINE}...</td>
-<td>0</td>
-</tr><tr><td colspan=4>
-summary
-</td></tr>
-
-<tr>
-<td rowspan=2>1</td>
-<td>opp</td>
-<td>N/A</td>
-<td>{LINE}...</td>
-<td>0</td>
-</tr><tr><td colspan=4>
-summary
-</td></tr>
-
-<tr>
-<td rowspan=2>1</td>
-<td>ldcur</td>
-<td>N/A</td>
-<td>{LINE}...</td>
-<td>0</td>
-</tr><tr><td colspan=4>
-summary
-</td></tr>
-
-<tr>
-<td rowspan=2>1</td>
-<td>pop</td>
-<td>N/A</td>
-<td>{LINE}...</td>
-<td>0</td>
-</tr><tr><td colspan=4>
-summary
-</td></tr>
-
-<tr>
-<td rowspan=2>1</td>
-<td>inc</td>
-<td>N/A</td>
-<td>{LINE}...</td>
-<td>0</td>
-</tr><tr><td colspan=4>
-summary
-</td></tr>
-
-<tr>
-<td rowspan=2>1</td>
-<td>line</td>
-<td>N/A</td>
-<td>{LINE}...</td>
-<td>0</td>
-</tr><tr><td colspan=4>
-summary
-</td></tr>
-
 
 </table>

@@ -115,7 +115,7 @@
 <td>call</td>
 <td>N/A</td>
 <td>{LINE}{SLINE}{OPCODE}{ARGS_LEN}{METHOD_STR_LEN}{STR_BYTES}</td>
-<td>17</td>
+<td>17+N</td>
 </tr><tr><td colspan=4>
 从栈顶开始弹出执行方法所需对象并执行，将执行结果对象压入栈顶。<br>
 弹出顺序为：<br>
@@ -238,7 +238,7 @@
 <tr>
 <td rowspan=2>19</td>
 <td>gt</td>
-<td>N/A</td>
+<td>></td>
 <td>{LINE}{SLINE}{OPCODE}</td>
 <td>9</td>
 </tr><tr><td colspan=4>
@@ -247,7 +247,7 @@
 
 <tr>
 <td rowspan=2>20</td>
-<td>gte</td>
+<td>>=</td>
 <td>></td>
 <td>{LINE}{SLINE}{OPCODE}</td>
 <td>9</td>
@@ -258,7 +258,7 @@
 <tr>
 <td rowspan=2>21</td>
 <td>lt</td>
-<td>N/A</td>
+<td><</td>
 <td>{LINE}{SLINE}{OPCODE}</td>
 <td>9</td>
 </tr><tr><td colspan=4>
@@ -268,7 +268,7 @@
 <tr>
 <td rowspan=2>22</td>
 <td>lte</td>
-<td>N/A</td>
+<td><=</td>
 <td>{LINE}{SLINE}{OPCODE}</td>
 <td>9</td>
 </tr><tr><td colspan=4>
@@ -278,7 +278,7 @@
 <tr>
 <td rowspan=2>23</td>
 <td>not</td>
-<td>N/A</td>
+<td>!</td>
 <td>{LINE}{SLINE}{OPCODE}</td>
 <td>9</td>
 </tr><tr><td colspan=4>
@@ -288,7 +288,7 @@
 <tr>
 <td rowspan=2>24</td>
 <td>and</td>
-<td>N/A</td>
+<td>&&</td>
 <td>{LINE}{SLINE}{OPCODE}</td>
 <td>9</td>
 </tr><tr><td colspan=4>

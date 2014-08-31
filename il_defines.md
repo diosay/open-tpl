@@ -238,7 +238,7 @@
 <tr>
 <td rowspan=2>19</td>
 <td>gt</td>
-<td>></td>
+<td>&gt;</td>
 <td>{LINE}{SLINE}{OPCODE}</td>
 <td>9</td>
 </tr><tr><td colspan=4>
@@ -247,8 +247,8 @@
 
 <tr>
 <td rowspan=2>20</td>
-<td>>=</td>
-<td>></td>
+<td>gte</td>
+<td>&gt;=</td>
 <td>{LINE}{SLINE}{OPCODE}</td>
 <td>9</td>
 </tr><tr><td colspan=4>
@@ -258,7 +258,7 @@
 <tr>
 <td rowspan=2>21</td>
 <td>lt</td>
-<td><</td>
+<td>&lt;</td>
 <td>{LINE}{SLINE}{OPCODE}</td>
 <td>9</td>
 </tr><tr><td colspan=4>
@@ -268,7 +268,7 @@
 <tr>
 <td rowspan=2>22</td>
 <td>lte</td>
-<td><=</td>
+<td>&lt;=</td>
 <td>{LINE}{SLINE}{OPCODE}</td>
 <td>9</td>
 </tr><tr><td colspan=4>
@@ -288,7 +288,7 @@
 <tr>
 <td rowspan=2>24</td>
 <td>and</td>
-<td>&&</td>
+<td>&amp;&amp;</td>
 <td>{LINE}{SLINE}{OPCODE}</td>
 <td>9</td>
 </tr><tr><td colspan=4>

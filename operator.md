@@ -1,4 +1,4 @@
-#Operator Precedence
+#运算符及优先级
 
 
 <table>
@@ -97,7 +97,7 @@
 </tr>
 
 <tr>
-<td rowspan=2>6</td>
+<td rowspan=2>8</td>
 <td>??</td>
 <td>空运算符。表达式 ?? 表达式2。</td>
 </tr>
@@ -107,14 +107,14 @@
 </tr>
 
 <tr>
-<td>6</td>
+<td>9</td>
 <td>=</td>
 <td>赋值运算符。变量 = 表达式。</td>
 </tr>
 <tr>
 
 <tr>
-<td>6</td>
+<td>10</td>
 <td>,</td>
 <td>逗号运算符。表达式 , 表达式 , …。</td>
 </tr>

@@ -24,7 +24,7 @@
 </tr>
 
 <tr>
-<td rowspan=3>2</td>
+<td rowspan=2>2</td>
 <td>-</td>
 <td>负号运算符。-表达式。</td>
 </tr>
@@ -48,7 +48,7 @@
 </tr>
 
 <tr>
-<td rowspan=3>4</td>
+<td rowspan=2>4</td>
 <td>+</td>
 <td>加。表达式 + 表达式。</td>
 </tr>
@@ -59,7 +59,7 @@
 
 
 <tr>
-<td rowspan=3>5</td>
+<td rowspan=4>5</td>
 <td>&gt;</td>
 <td>大于。表达式 &gt; 表达式。</td>
 </tr>
@@ -77,7 +77,7 @@
 </tr>
 
 <tr>
-<td rowspan=3>6</td>
+<td rowspan=2>6</td>
 <td>==</td>
 <td>等于。表达式 == 表达式。</td>
 </tr>
@@ -87,7 +87,7 @@
 </tr>
 
 <tr>
-<td rowspan=3>7</td>
+<td rowspan=2>7</td>
 <td>!!</td>
 <td>逻辑或。表达式 || 表达式。</td>
 </tr>
@@ -97,7 +97,7 @@
 </tr>
 
 <tr>
-<td rowspan=3>6</td>
+<td rowspan=2>6</td>
 <td>??</td>
 <td>空运算符。表达式 ?? 表达式2。</td>
 </tr>
@@ -107,14 +107,14 @@
 </tr>
 
 <tr>
-<td rowspan=3>6</td>
+<td>6</td>
 <td>=</td>
 <td>赋值运算符。变量 = 表达式。</td>
 </tr>
 <tr>
 
 <tr>
-<td rowspan=3>6</td>
+<td>6</td>
 <td>,</td>
 <td>逗号运算符。表达式 , 表达式 , …。</td>
 </tr>

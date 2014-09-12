@@ -160,7 +160,7 @@
 <td>11</td>
 <td>|</td>
 <td>格式运算符。值 | name = 表达式 , …。</td>
-<td></td>
+<td>该表达式只能在输出标签中，如：{now | datetime='y-M-D'}</td>
 </tr>
 <tr>
 

@@ -14,17 +14,15 @@
 <td rowspan=2>0</td>
 <td>&apos;</td>
 <td>单引号。表示一个字符串。如：s=&apos;hello &quot;string&quot;&apos; </td>
-<td>在字符串中\&apos;表示一个单引号字符(转义)。</td>
+<td>\&apos;表示单引号字符(转义)。</td>
 </tr>
 <tr>
 <td>&quot;</td>
 <td>双引号。表示一个字符串。如：s=&quot;hello &apos;string&apos;&quot; </td>
-<td>在字符串中\&quot;表示一个双引号字符(转义)。</td>
+<td>\&quot;表示双引号字符(转义)。</td>
 </tr>
 <tr>
-<td>.</td>
-<td>点。对象成员访问。</td>
-<td></td>
+<td colspan="4">.</td>
 </tr>
 
 <tr>

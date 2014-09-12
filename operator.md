@@ -21,9 +21,7 @@
 <td>双引号。表示一个字符串。如：s=&quot;hello &apos;string&apos;&quot; </td>
 <td>\&quot;表示双引号字符(转义)。</td>
 </tr>
-<tr>
-<td colspan="4">.</td>
-</tr>
+
 
 <tr>
 <td rowspan=3>1</td>

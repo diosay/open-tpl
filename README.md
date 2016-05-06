@@ -1,4 +1,4 @@
-#OPEN TPL
+#OPEN TPL Specification
 
 **OTPL** (Open template programming language，开放模板编程语言) 它致力于实现一个跨平台跨语言的，
 统一的，标准的，开放的模板编程语言。它非常的规范和工整：
